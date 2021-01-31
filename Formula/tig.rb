@@ -26,9 +26,11 @@ class Tig < Formula
   depends_on "readline"
 
   def install
+    ENV.deparallelize
     system "./autogen.sh" if build.head?
     system "./configure", "--prefix=#{prefix}", "--sysconfdir=#{etc}"
     system "make"
+    system "make", "test"
     # Ensure the configured `sysconfdir` is used during runtime by
     # installing in a separate step.
     system "make", "install", "sysconfdir=#{pkgshare}/examples"
