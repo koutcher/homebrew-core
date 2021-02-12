@@ -3,7 +3,7 @@ class Tig < Formula
   homepage "https://jonas.github.io/tig/"
   url "https://github.com/jonas/tig/releases/download/tig-2.5.2/tig-2.5.2.tar.gz"
   sha256 "1e5a8175627231ba619686ec338b4ad2843a6526122ea4e9fde1739dd2b4830b"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "8981a3341850eec12635de144174fab3198f73b530ed5979413334ddeabf0bf7"
