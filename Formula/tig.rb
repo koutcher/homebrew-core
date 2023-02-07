@@ -4,6 +4,7 @@ class Tig < Formula
   url "https://github.com/jonas/tig/releases/download/tig-2.5.8/tig-2.5.8.tar.gz"
   sha256 "b70e0a42aed74a4a3990ccfe35262305917175e3164330c0889bd70580406391"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_ventura:  "3fa31c8df81b62eab50fe8dce66ae4d3f8c6e3e3b5b9419b66ea060134c45cec"
@@ -26,6 +27,7 @@ class Tig < Formula
 
   # https://github.com/jonas/tig/issues/1210
   depends_on "ncurses"
+  depends_on "pcre2"
   depends_on "readline"
 
   def install
